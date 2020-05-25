@@ -1,0 +1,30 @@
+<%- include('.../../../../paritals/header') %>
+<div class="containers">
+  <a href="/admin/studentpage" class="btn btn-primary">Add New Student Page</a>
+
+  <br>
+  <br>
+            <div class="row">
+                <h1>Student Page List</h1>
+                <table class="table table-striped table-primary">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%row.forEach(function(p){ %>
+                        <tr>
+                            <td><%=p.title%></td>
+                            <td>
+                            <a class="btn btn-primary btn-xs" href="/admin/studentlist/edit/<%=p._id%>"><i class="glyphicon glyphicon-edit"></i></a>
+                            <a class="btn btn-danger btn-xs" href="/admin/studentlist/delete/<%=p._id%>"><i class="glyphicon glyphicon-trash"></i></a>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+

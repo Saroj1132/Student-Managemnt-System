@@ -1,0 +1,59 @@
+<%- include('./../paritals/TeacherHeader.ejs') %>
+<div class="container">
+            <div class="row">
+        <div class="mainbox col-md-6 col-md-offset" style="margin-top:50px;">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Add Marks to Student</div>
+                </div>
+                <div class="panel-body">
+                    <form action="Exam_Result" class="form-horizontal" method="post">
+                        <div class="form-group">
+                            <label class="col-md-3 colntrol-label">Exam_Name: </label>
+                            <select name="Exam_Id" class="form-control">
+                                <%exam.forEach(function(p){ %>
+                                    <option value="<%=p._id%>"><%=p.Name%></option>
+                                    <% }) %>
+
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-3 colntrol-label">Student_Name: </label>
+                            <select name="Student_id" class="form-control">
+                                <%Student.forEach(function(p){ %>
+                                    <option value="<%=p.Student_id%>"><%=p.Student_id.Fname%> <%=p.Student_id.Lname%></option>
+                                    <% }) %>
+
+                            </select>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 colntrol-label">Subject: </label>
+                            <select name="Course_id" class="form-control">
+                                <%Subject.forEach(function(p){ %>
+                                    <option value="<%=p.Course_id._id%>"><%=p.Course_id.Courser_Name%></option>
+                                <% }) %>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 colntrol-label">Marks: </label>
+                            <input type="text" class="form-control" name="Marks"> 
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <div class="col-md-offest-3 col-md-9">
+                                <input type="submit" class="btn btn-primary" value="Add Marks to student" /> 
+                            </div>                        
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>                     
+</div>
+\

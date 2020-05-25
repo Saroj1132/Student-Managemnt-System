@@ -1,0 +1,47 @@
+<%- include('.../../../../paritals/header') %>
+
+<div class="row">
+    <div class="col-md-8 mx-auto">
+
+        <div class="container">
+            <div class="row">
+        <div class="mainbox col-md-6 col-md-offset" style="margin-top:50px; margin-left: 450px; ">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Add new Teacher page</div>
+                </div>
+                <div class="panel-body">
+                    <form action="teacherpage" class="form-horizontal" method="post">
+                        <div class="form-group">
+                            <label class="col-md-3 colntrol-label">Title: </label>
+                            <input name="title" class="form-control" id="exampleInputPassword1" placeholder="Enter Email Address"  >
+                       
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 colntrol-label">Slug: </label>
+                            <input name="slug" class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
+                        
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 colntrol-label">Content: </label>
+                            <textarea name="content " class="form-control" id="exampleInputPassword1" type="date" placeholder="Enter DOB"  ></textarea>
+             
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offest-3 col-md-9">
+                                <input type="submit" class="btn btn-primary" value="Add new Catogory" /> 
+                            </div>                        
+                        </div>
+
+                        <p><a href="/admin/teacherpagelist">View All Page List !!</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>                     
+</div>
+
+
+
+<%- include('.../../../../paritals/footer') %>

@@ -1,0 +1,30 @@
+<%- include('../paritals/TeacherHeader') %>
+<div class="container">
+
+  <br>
+            <div class="row">
+                <h1>TeacherInfo</h1>
+                <table class="table table-striped table-primary">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Section</th>
+                            <th>Subject</th>
+                            <th>Standerd</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%row.forEach(function(p){ %>
+                        <tr>
+                            <td><%=p.Year%></td>
+                            <td><%=p.Section%></td>
+                            <td><%=p.Course_id.Courser_Name%></td>
+                            <td><%=p.Standerd%></td>
+
+                            
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>

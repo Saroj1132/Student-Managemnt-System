@@ -1,0 +1,34 @@
+<%- include('.../../../paritals/header') %>
+<div class="containers">
+  <a href="/Course/Classroom_Student" class="btn btn-primary">Add New Classroom</a>
+
+  <br>
+  <br>
+            <div class="row">
+                <h1>Classroom List</h1>
+                <table class="table table-striped table-primary">
+                    <thead>
+                        <tr>
+                            <th>StudntName</th>
+                            <th>Section</th>
+                            <th>Standerd</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%row.forEach(function(p){ %>
+                        <tr>
+                            <td><%=p.Student_id.Fname%> <%=p.Student_id.Lname%></td>
+                            <td><%=p.Section%></td>
+                            <td><%=p.Standerd%></td>
+                          
+                            <td>
+                            <a class="btn btn-primary btn-xs" href="/Course/editclassstud/<%=p._id%>"><i class="glyphicon glyphicon-edit"></i></a>
+                            <a class="btn btn-danger btn-xs" href="/Course/deleteclasstud/<%=p._id%>"><i class="glyphicon glyphicon-trash"></i></a>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>

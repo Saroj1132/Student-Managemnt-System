@@ -1,0 +1,28 @@
+<%- include('../paritals/studentheader') %>
+<div class="container">
+
+  <br>
+            <div class="row">
+                <h1>TeacherInfo</h1>
+                <table class="table table-striped table-primary">
+                    <thead>
+                        <tr>
+                            <th>Student_id</th>
+                            <th>Section</th>
+                            <th>Standerd</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%row.forEach(function(p){ %>
+                        <tr>
+                            <td><%=p.Student_id.Fname%> <%=p.Student_id.Lname%></td>
+                            <td><%=p.Section%></td>
+                            <td><%=p.Standerd%></td>
+
+                            
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>

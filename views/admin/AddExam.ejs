@@ -1,0 +1,50 @@
+<%- include('.../../../paritals/header') %>
+
+<div class="row">
+    <div class="col-md-8 mx-auto">
+
+        <div class="container">
+            <div class="row">
+        <div class="mainbox col-md-6 col-md-offset" style="margin-top:50px; margin-left: 450px; ">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Add Exam</div>
+                </div>
+                <div class="panel-body">
+                    <form action="AddExam" class="form-horizontal" method="post">
+                        <div class="form-group">
+                            <label class="col-md-3 colntrol-label">Exam_Type: </label>
+                            <select name="Exam_TypeId" class="form-control">
+                                <%exam.forEach(function(p){ %>
+                                    <option value="<%=p._id%>"><%=p.Exam_Type%></option>
+                                    <% }) %>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 colntrol-label">Name: </label>
+                            <input name="Name" class="form-control" id="exampleInputPassword1" >
+                       
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 colntrol-label">Start_Date: </label>
+                            <input name="Date" class="form-control" id="exampleInputPassword1" type="date">
+             
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offest-3 col-md-9">
+                                <input type="submit" class="btn btn-primary" value="Add new Exam" /> 
+                            </div>                        
+                        </div>
+
+                        <p><a href="/Course/ExamList">View All Exam Type List !!</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>                     
+</div>
+
+
+

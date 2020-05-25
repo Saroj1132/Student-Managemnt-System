@@ -1,0 +1,34 @@
+<%- include('.../../../paritals/header') %>
+<div class="containers">
+  <a href="/Course/Exam" class="btn btn-primary">Add New Exam Page</a>
+
+  <br>
+  <br>
+            <div class="row">
+                <h1>Exam List</h1>
+                <table class="table table-striped table-primary">
+                    <thead>
+                        <tr>
+                            <th>Exam_Type</th>
+                            <th>ExamName</th>
+                            <th>StartDate</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%row.forEach(function(p){ %>
+                        <tr>
+                            <td><%=p.Exam_TypeId.Exam_Type%></td>
+                            <td><%=p.Name%></td>
+                            <td><%=p.Start_date%></td>
+
+                            <td>
+                            <a class="btn btn-primary btn-xs" href="/Course/editExam/<%=p._id%>"><i class="glyphicon glyphicon-edit"></i></a>
+                            <a class="btn btn-danger btn-xs" href="/Course/deleteExam/<%=p._id%>"><i class="glyphicon glyphicon-trash"></i></a>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>

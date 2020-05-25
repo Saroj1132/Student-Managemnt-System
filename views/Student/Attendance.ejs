@@ -1,0 +1,52 @@
+<%- include('./../paritals/studentheader.ejs') %>
+<div class="container">
+            <div class="row">
+        <div class="mainbox col-md-6 col-md-offset" style="margin-top:50px;">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Add new Catogory</div>
+                </div>
+                <div class="panel-body">
+                    <form action="attendance" class="form-horizontal" method="post">
+                        <div class="form-group">
+                            <label class="col-md-3 colntrol-label">Student_Name: </label>
+                            <select name="Student_id" class="form-control">
+                                <%Student.forEach(function(p){ %>
+                                    <option value="<%=p._id%>"><%=p.Fname%> <%=p.Lname%></option>
+                                    <% }) %>
+
+                            </select>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleConfirmPassword">Status</label>
+                            <select name="Standerd" class="form-control">
+                                <option value="present">Present</option>
+                                <option value="absent">Absent</option>
+    
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 colntrol-label">Subject: </label>
+                            <select name="Course_id" class="form-control">
+                                <%Subject.forEach(function(p){ %>
+                                    <option value="<%=p.Course_id._id%>"><%=p.Course_id.Courser_Name%></option>
+                                <% }) %>
+                            </select>
+                        </div>
+                        
+
+                        <div class="form-group">
+                            <div class="col-md-offest-3 col-md-9">
+                                <input type="submit" class="btn btn-primary" value="Add new Classroom" /> 
+                            </div>                        
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>                     
+</div>
+\

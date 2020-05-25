@@ -1,0 +1,73 @@
+<%- include('.../../../paritals/header') %>
+
+<div class="row">
+    <div class="col-md-8 mx-auto">
+
+        <div class="container">
+            <div class="row">
+        <div class="mainbox col-md-6 col-md-offset" style="margin-top:50px; margin-left: 450px; ">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Add Student To Classroom</div>
+                </div>
+                <div class="panel-body">
+                    <form action="Classroomstud" class="form-horizontal" method="post">
+                        <div class="form-group">
+                            <label class="col-md-3 colntrol-label">Student_Name: </label>
+                            <select name="Student_id" class="form-control">
+                                <%Student.forEach(function(p){ %>
+                                    <option value="<%=p._id%>"><%=p.Fname%> <%=p.Lname%></option>
+                                    <% }) %>
+
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="exampleConfirmPassword">Standerd</label>
+                            <select name="Standerd" class="form-control">
+                                <option value="1st">1st</option>
+                                <option value="2nd">2nd</option>
+                                <option value="3rd">3rd</option>
+                                <option value="4th">4th</option>
+                                <option value="5th">5th</option>
+                                <option value="6th">6th</option>
+                                <option value="7th">7th</option>
+                                <option value="8th">8th</option>
+                                <option value="9th">9th</option>
+                                <option value="10th">10th</option>
+                                <option value="9th">11th</option>
+                                <option value="10th">12th</option>
+    
+                            </select>
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <label for="exampleConfirmPassword">Section</label>
+                            <select name="Section" class="form-control">
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                                <option value="c">c</option>
+                                
+    
+                            </select>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <div class="col-md-offest-3 col-md-9">
+                                <input type="submit" class="btn btn-primary" value="Add new Studnet to class" /> 
+                            </div>                        
+                        </div>
+
+                        <p><a href="/Course/classroomstudent_list">View All Classroom Student List !!</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>                     
+</div>
+
+
+
